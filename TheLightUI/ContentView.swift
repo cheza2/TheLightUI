@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-   @State var isLightOn = true
+    @State var isLightOn = true
     var body: some View {
         ZStack {
             isLightOn ? Color.white : Color.black
         }
         .edgesIgnoringSafeArea(.all)
+        .statusBar(hidden: true)
         .onTapGesture {
             isLightOn.toggle()
         }
